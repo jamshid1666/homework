@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 40px;
+          border-bottom: 1px solid #eee;
+        }
+        .logo {
+          display: flex;
+          align-items: center;
+        }
+        .logo img {
+          width: 30px;
+          margin-right: 8px;
+        }
+        .menu {
+          display: flex;
+          gap: 30px;
+        }
+        .menu a {
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+        }
+        .menu a.active {
+          color: #007bff;
+          border-bottom: 2px solid #007bff;
+          padding-bottom: 3px;
+        }
+        .get-started {
+          background-color: #007bff;
+          color: white;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        .smart-business-section {
+            background-color: #f9f9f9;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: sans-serif;
+        }
+
+        .left-content {
+            max-width: 550px;
+        }
+
+        .smart-business {
+            color: #2962ff;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .main-heading {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .business-highlight {
+            color: #2962ff;
+        }
+
+        .description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .get-started-button {
+            background-color: #2962ff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .play-video-button {
+            background-color: white;
+            color: #2962ff;
+            border: 1px solid #ccc;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .play-icon {
+            font-size: 18px; 
+        }
+
+        .right-image {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+        .outer-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .inner-circle-m {
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2962ff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .inner-circle-d {
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e91e63;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .about-us-section {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .image-container {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px; 
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .about-us-title {
+            color: #2962ff;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .action-button {
+            background-color: #2962ff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+      
+        @media (max-width: 768px) {
+            .about-us-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .how-we-work-section {
+            font-family: sans-serif;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 300px; 
+            padding: 20px;
+        }
+
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #2962ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .icon {
+            color: #2962ff;
+            font-size: 40px; 
+
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .steps-container {
+                flex-direction: column; 
+                align-items: center;
+            }
+
+            .step {
+                min-width: auto;
+                width: 80%;
+                margin-bottom: 30px;
+            }
+        }
+      </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg" alt="Logo">
+      <span style="color:#007bff; font-weight: bold;">DigitalOcean</span>
+    </div>
+ 
+    <div class="menu">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Reviews</a>
+      </div>
+  
+      <button class="get-started">Get Started</button>
+    </div>
+    <div class="smart-business-section">
+        <div class="left-content">
+            <div class="smart-business">SMART BUSINESS</div>
+            <h1 class="main-heading">Connecting people <span class="business-highlight">is our business</span></h1>
+            <p class="description">As a rule the organization settles on the inventive and media choices. Regularly it supplies supporting statistical.</p>
+            <div class="buttons-container">
+                <a href="#" class="get-started-button">Get Started</a>
+                <a href="#" class="play-video-button">
+                    <span class="play-icon">▶</span> Play Video
+                </a>
+            </div>
+        </div>
+        <div class="right-image">
+            <div class="outer-circle">
+                <div class="inner-circle-m">M</div>
+                <div class="inner-circle-d">D</div>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-section">
+        <div class="image-container">
+            
+        </div>
+        <div class="text-content">
+            <h2 class="about-us-title">ABOUT US</h2>
+            <h1 class="main-title">Platform Dedicated To Promoting</h1>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum sagittis ultrices consectetur adipiscing elit. Fringilla quisque pulvinar.</p>
+            <a href="#" class="action-button">What we do?</a>
+        </div>
+    </div>
+    <div class="how-we-work-section">
+        <h2 class="section-title">How We Work</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="icon-container">
+                    <span class="icon">🚀</span> </div>
+                <h3 class="step-title">Start Design</h3>
+                <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+            </div>
+            <div class="step">
+                <div class="icon-container">
+                    <span class="icon">⚙️</span> </div>
+                <h3 class="step-title">Go to Code</h3>
+                <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+            </div>
+            <div class="step">
+                <div class="icon-container">
+                    <span class="icon">✔️</span> </div>
+                <h3 class="step-title">Final Deliverd</h3>
+                <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
