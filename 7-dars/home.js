@@ -78,3 +78,51 @@
 // };
 // let res = afterNYears(person,5);
 // console.log(res);
+
+// Task  - 5
+
+
+// Task - 6
+// function doubleChar(str) {
+//     let res = "";
+//     for (let i = 0; i < str.length; i++) {
+//         res += str[i] + str[i];
+//     }
+//     return res;
+// }
+// let result = doubleChar('String');
+// console.log(result);
+
+
+// Task - 7
+// function upperCase(str) {
+// let b = str.split(' ');
+// for (let i = 0; i < b.length; i++) {
+// if (b[i][0] !== b[i][0].toUpperCase()) {
+//     return false;
+// }
+// }
+// return true;
+// }
+// let res = upperCase("A Mind Boggling Achievement");
+// console.log(res);
+
+// Task - 8 Leetcode
+// function firstUniqueCharacter(str) {
+//     let count = {};
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i];
+//         count[char] = (count[char] || 0) + 1;
+//     }
+//     for (let i = 0; i < str.length; i++) {
+//         if (count[str[i]] === 1) {
+//             return i; 
+//         }
+//     }
+//     return -1; 
+// }
+
+// console.log(firstUniqueCharacter("leetcode"));
+// console.log(firstUniqueCharacter("loveleetcode")); 
+
+// Task - 9 Leetcode
