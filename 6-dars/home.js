@@ -62,8 +62,8 @@
 
 
 
-// Nasiya savdo loyihasi
-// texnik qurilma buyurtmalari massivi
+// // Nasiya savdo loyihasi
+// // texnik qurilma buyurtmalari massivi
 // let orders = [
 //     { id: 1, productName: "MacBook Pro 16-inch", basePrice: 30000000, payInMonths: 6, monthlyPayment: 0 },
 //     { id: 2, productName: "iPhone 13", basePrice: 15000000, payInMonths: 12, monthlyPayment: 0 },
@@ -132,7 +132,4 @@
 
 // // buyurtmalarni qayta ishlash
 // orders.forEach(order => orderDevice(order, deviceReadyCallback));
-
-
-
 
