@@ -81,6 +81,63 @@
 
 // Task  - 5
 
+//  let database = {
+//     students:[],
+//     read() {
+//         console.log(this.students);
+//     },
+//     create(user) {
+//         let find = this.students.filter((val) => val.name == user.name);
+
+//         if (find.length) {
+//             console.log('Bu user avval qoshilgan');
+//             return 0;
+//         }
+//         this.students.push(user);
+//         console.log('Student muvofaqqiyatli qoshildi');
+//     },
+    
+//     update(name,user) {
+//         let findIndex  = this.students.findIndex((val) => val.name == name);
+//         if (findIndex == -1) {
+//             console.log('Yangilanishi kerak bolgan user topilmadi');
+//             return 0;
+//         }
+
+//         this.students[findIndex] = {
+//             ...this.students[findIndex],
+//             ...user,
+//         },
+//         console.log(`Student yangilandi: ${this.students[findIndex]}`);
+//     },
+
+//     findOne(name){
+//         let found = this.students.find((val) => val.name == name);
+//         if (found.length) {
+//             console.log('student topildi',found);
+//             return found;
+//         } else {
+//             console.log('student topilmadi');
+//             return 0;
+//         }
+       
+//     },
+//     pagination(limit,skip) {
+//        const res = this.students.slice(skip,skip+limit);
+//        console.log(`sahifalangan natijalar (limit=${limit}, skip= ${skip}):`,res);
+//        return res;  
+//     },
+
+//     delete(name) {
+//         this.students = this.students.filter((val) => val.name != name);
+//         console.log('User topilmadi'); 
+//     },
+//  };
+
+
+//  database.create({name:'Xamidullo',age:33, id:123,tolov:false});
+// database.findOne('Xamidullo');
+
 
 // Task - 6
 // function doubleChar(str) {
